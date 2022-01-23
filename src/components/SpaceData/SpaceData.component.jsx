@@ -43,9 +43,6 @@ const SpaceData = () => {
 
   return (
     <>
-      <h2>
-        <em>Data only available since 06-20-1995</em>
-      </h2>
       <DateInfo
         date={date}
         setDate={setDate}

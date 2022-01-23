@@ -17,17 +17,40 @@ html {
     }
 }
 body { 
-    font-family: 'Nunito', sans-serif;
-    font-weight: 400;
+    font-family: 'Space Mono', monospace;
     line-height: 1.5;
-    font-size: 1.4rem;
-    background: '#1d1f28';
-    color: '#fafafa';
+    font-size: 18px;
+    font-weight: 400;
+    background-color: #1d1f28;
+    color: #fafafa;
 }
 h1,h2,h3,h4,h5,h6 {
   color: white;
   transition: .25s;
   
+}
+h1 {
+  font-weight: 700;
+  font-size: 4rem;
+  @media (max-width: 400px) {
+    font-size: 2rem;
+  }
+}
+h2 {
+  font-weight: 700;
+  font-size: 3rem;
+  @media (max-width: 400px) {
+    font-size: 1.7rem;
+  }
+}
+
+h3 {
+  font-weight: 700;
+  font-size: 3rem;
+  margin: 1.4rem;
+  @media (max-width: 400px) {
+    font-size: 1.7rem;
+  }
 }
 `;
 
@@ -54,7 +77,7 @@ export const Container = styled.section`
 `;
 
 export const Section = styled.section`
-  margin-top: 1.5rem;
+  margin: 1.5rem;
   text-align: center;
   display: flex;
   flex-direction: column;

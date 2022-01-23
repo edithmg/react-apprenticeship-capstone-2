@@ -1,7 +1,6 @@
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
-import './App.css';
-import GlobalStyles from './GlobalStyles';
 import Home from './pages/Home';
+import GlobalStyles from './GlobalStyles';
 
 const App = () => {
   return (

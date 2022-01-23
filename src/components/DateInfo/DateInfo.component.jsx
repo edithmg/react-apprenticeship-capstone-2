@@ -1,24 +1,11 @@
 import React, { useState } from 'react';
-import styled from 'styled-components';
 import DatePicker from 'react-date-picker';
-
-const Button = styled.button`
-  padding: 0.8em;
-  margin: 0.6em;
-  color: black;
-  background: #ccc;
-  font-size: 15px;
-  font-family: 'Space Mono';
-  border: none;
-  border-radius: 3px;
-  cursor: pointer;
-`;
+import { PickerContainer, DateControls } from './DateInfo.styles';
 
 const DateInfo = (props) => {
   const [pickerDate, setPickerDate] = useState(new Date());
   const [current, setCurrent] = useState(false);
   const isToday = new Date();
-  //console.log(isToday, current);
 
   const handlePickerSelect = (newDate) => {
     setPickerDate(newDate);
@@ -51,17 +38,15 @@ const DateInfo = (props) => {
   };
 
   return (
-    <div>
-      <form>
-        <DatePicker
-          value={current ? isToday : pickerDate}
-          onChange={handlePickerSelect}
-        />
+    <PickerContainer>
+      <DatePicker
+        value={current ? isToday : pickerDate}
+        onChange={handlePickerSelect}
+      />
 
-        <Button onClick={handleSubmit}>view</Button>
-        <Button onClick={clearPicker}>Today</Button>
-      </form>
-    </div>
+      <DateControls onClick={handleSubmit}>View</DateControls>
+      <DateControls onClick={clearPicker}>Back to today</DateControls>
+    </PickerContainer>
   );
 };
 

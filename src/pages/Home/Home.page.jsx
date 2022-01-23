@@ -7,6 +7,7 @@ const Home = () => {
     <Container>
       <Section>
         <h1>Welcome to Nasa Photo of the Day! </h1>
+        <em>Data only available since 06-20-1995</em>
         <SpaceData />
       </Section>
     </Container>
