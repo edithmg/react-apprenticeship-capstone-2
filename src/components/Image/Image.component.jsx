@@ -9,7 +9,9 @@ const Image = (photoData) => {
   return (
     <div>
       <Photo src={photo.url} alt="NASA" />
-      <Description>{photo.explanation}</Description>
+      <Description aria-label="Photo explanation">
+        {photo.explanation}
+      </Description>
     </div>
   );
 };

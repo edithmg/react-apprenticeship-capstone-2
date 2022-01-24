@@ -1,4 +1,5 @@
 import styled, { createGlobalStyle } from 'styled-components';
+import nebula from './images/space-nebula.jpg';
 
 const GlobalStyles = createGlobalStyle`
 * {
@@ -23,6 +24,7 @@ body {
     font-weight: 400;
     background-color: #1d1f28;
     color: #fafafa;
+    background-image: url(${nebula});
 }
 h1,h2,h3,h4,h5,h6 {
   color: white;

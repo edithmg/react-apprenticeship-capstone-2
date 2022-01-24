@@ -14,10 +14,10 @@ const SpaceData = () => {
 
     try {
       const response = await fetch(url);
-
+      console.log(response);
       if (response.ok) {
         const data = await response.json();
-        console.log(data);
+        //console.log(data);
         setNasaData(data);
         setError(null);
         setIsLoading(false);
@@ -37,9 +37,7 @@ const SpaceData = () => {
   if (isLoading) {
     return <h2>loading...</h2>;
   }
-  if (error) return <h1>{error}</h1>;
-
-  console.log(nasaData.media_type);
+  if (error) return <h2>{error}</h2>;
 
   return (
     <>
@@ -49,7 +47,6 @@ const SpaceData = () => {
         nasaData={nasaData}
         setNasaData={setNasaData}
       />
-
       <h3>{nasaData.title}</h3>
       {nasaData.media_type === 'image' ? (
         <Image {...nasaData} />

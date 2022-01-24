@@ -8,6 +8,7 @@ const DateInfo = (props) => {
   const isToday = new Date();
 
   const handlePickerSelect = (newDate) => {
+    console.log(newDate);
     setPickerDate(newDate);
   };
 

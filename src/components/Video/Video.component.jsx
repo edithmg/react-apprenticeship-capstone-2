@@ -8,8 +8,10 @@ const Video = (videoData) => {
   };
   return (
     <div>
-      <VideoPlayer src={video.url} alt="NASA" />
-      <VideoDescription>{video.explanation}</VideoDescription>
+      <VideoPlayer src={video.url} alt="NASA" aria-label="Video player" />
+      <VideoDescription aria-label="Video explanation">
+        {video.explanation}
+      </VideoDescription>
     </div>
   );
 };
