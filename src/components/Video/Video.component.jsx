@@ -5,12 +5,13 @@ const Video = (videoData) => {
   const video = {
     url: videoData.url,
     explanation: videoData.explanation,
+    credit: videoData.copyright,
   };
   return (
     <div>
       <VideoPlayer src={video.url} alt="NASA" aria-label="Video player" />
       <VideoDescription aria-label="Video explanation">
-        {video.explanation}
+        <p>{video.explanation}</p>
       </VideoDescription>
     </div>
   );

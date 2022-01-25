@@ -6,7 +6,7 @@ const Home = () => {
   return (
     <Container>
       <Section>
-        <h1>Welcome to Nasa Photo of the Day! </h1>
+        <h1>Welcome to NASA Photo of the Day! </h1>
         <h2>
           <em>Data only available since 06-20-1995</em>
         </h2>

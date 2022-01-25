@@ -3,6 +3,6 @@ import App from './App';
 
 test('renders App component with welcome text', () => {
   render(<App />);
-  const element = screen.getByText(/Welcome to Nasa Photo of the Day!/i);
+  const element = screen.getByText(/Welcome to NASA Photo of the Day!/i);
   expect(element).toBeInTheDocument();
 });

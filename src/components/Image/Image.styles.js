@@ -1,33 +1,29 @@
 import styled from 'styled-components';
 
 export const Photo = styled.img`
-  width: 580px;
+  max-width: 50vw;
   height: auto;
+  margin-top: 30px;
+  margin-bottom: 40px;
 `;
 
-export const Description = styled.p`
+export const Description = styled.div`
   color: white;
-  font-size: 20px;
-  width: 80%;
-  margin-left: 120px;
-  background-color: black;
-  opacity: 0.6;
+  font-size: 2rem;
+  max-width: 70vw;
+  text-align: center;
+  background-color: darkslategray;
+  opacity: 0.7;
+  p {
+    padding: 2rem;
+  }
   @media only screen and (max-width: 600px) {
-    width: 90%;
-    margin: 0;
-    padding-left: 10px;
-    text-align: left;
+    font-size: 0.8rem;
   }
   @media only screen and (max-width: 700px) {
-    width: 90%;
-    margin: 0;
-    padding-left: 15px;
-    text-align: left;
+    font-size: 0.9rem;
   }
   @media only screen and (max-width: 812px) {
-    width: 90%;
-    margin: 0;
-    padding-left: 15px;
-    text-align: left;
+    font-size: 1.1rem;
   }
 `;

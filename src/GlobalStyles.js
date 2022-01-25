@@ -34,14 +34,14 @@ h1,h2,h3,h4,h5,h6 {
 h1 {
   font-weight: 700;
   font-size: 4rem;
-  @media (max-width: 400px) {
-    font-size: 2rem;
+  @media (max-width: 600px) {
+    font-size: 3rem;
   }
 }
 h2 {
-  font-weight: 700;
-  font-size: 3rem;
-  @media (max-width: 400px) {
+ 
+  font-size: 2.5rem;
+  @media (max-width: 600px) {
     font-size: 1.7rem;
   }
 }
@@ -58,7 +58,7 @@ h3 {
 
 export default GlobalStyles;
 
-export const Container = styled.section`
+export const Container = styled.main`
   margin: 0 auto;
   padding: 0 50px;
   max-width: 1300px;

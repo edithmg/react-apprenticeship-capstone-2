@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import DatePicker from 'react-date-picker';
-import { PickerContainer, DateControls } from './DateInfo.styles';
+import { PickerContainer, DateControls, DateBtn } from './DateInfo.styles';
 
 const DateInfo = (props) => {
   const [pickerDate, setPickerDate] = useState(new Date());
@@ -44,9 +44,10 @@ const DateInfo = (props) => {
         value={current ? isToday : pickerDate}
         onChange={handlePickerSelect}
       />
-
-      <DateControls onClick={handleSubmit}>View</DateControls>
-      <DateControls onClick={clearPicker}>Back to today</DateControls>
+      <DateControls>
+        <DateBtn onClick={handleSubmit}>View</DateBtn>
+        <DateBtn onClick={clearPicker}>Back to today</DateBtn>
+      </DateControls>
     </PickerContainer>
   );
 };

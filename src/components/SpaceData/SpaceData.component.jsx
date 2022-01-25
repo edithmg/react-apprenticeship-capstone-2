@@ -14,7 +14,6 @@ const SpaceData = () => {
 
     try {
       const response = await fetch(url);
-      console.log(response);
       if (response.ok) {
         const data = await response.json();
         //console.log(data);
@@ -22,7 +21,7 @@ const SpaceData = () => {
         setError(null);
         setIsLoading(false);
       } else {
-        setError('API error, please try another date');
+        setError('API bad request, please try another date');
       }
       // eslint-disable-next-line
     } catch (error) {
